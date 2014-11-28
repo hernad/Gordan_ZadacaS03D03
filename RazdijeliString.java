@@ -10,20 +10,25 @@ public class RazdijeliString {
 	 * @return
 	 */
 	
-	private static String[] razdijeli(String str, char chr) {
-		String[] niz = new String [str.length()]; 
-		int i=0;
-		while (str.length() > 0) 
+	public static String[] razdijeli(String str, char chr)
+	{
+		String noviString="";
+		int i=0, j=0;
+		String[] niz= new String[str.length()];
+		while(i<str.length())
 		{
-			String noviString = str.substring(0,
-					str.indexOf(chr));
-			niz[i] = noviString;
-			str = str.substring(0, str.indexOf(chr));
-			i++;
-		} 
+			if(str.charAt(i)!=chr) 
+				noviString+=str.substring(i, i+1);
+			else 
+			{
+			niz[j]=noviString;
+			j++;
+			noviString="";
+			}
+			i++;		
+		}
 		return niz;
 	}
-	
 	public static void main(String[] args) {
 		Scanner unos = new Scanner(System.in);
 		System.out.println("Unesite string: ");
@@ -38,6 +43,5 @@ public class RazdijeliString {
 		}
 	}
 
-	
 
 }
