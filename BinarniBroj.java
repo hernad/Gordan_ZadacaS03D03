@@ -51,7 +51,7 @@ public class BinarniBroj {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("Unesite jedan broj(do 255): ");
+		System.out.println("Unesite jedan broj: ");
 		Scanner unos = new Scanner(System.in);
 		int broj = unos.nextInt();
 		String binarni = pretvoriUBinarni(broj);
