@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class RazdijeliString {
 
 	/**
-	 * Funkcija bi trebala da vrati niz stringova, razdvojenih zadanim karakterom
+	 * Funkcija vraća niz stringova, razdvojenih zadanim karakterom
 	 * @param str
 	 * @param chr
 	 * @return
@@ -13,17 +13,18 @@ public class RazdijeliString {
 	public static String[] razdijeli(String str, char chr)
 	{
 		String noviString="";
+		str = str + " ";
 		int i=0, j=0;
 		String[] niz= new String[str.length()];
 		while(i<str.length())
 		{
-			if(str.charAt(i)!=chr) 
-				noviString+=str.substring(i, i+1);
+			if(str.charAt(i) != chr) 
+				noviString += str.substring(i, i+1);
 			else 
 			{
-			niz[j]=noviString;
-			j++;
-			noviString="";
+				niz[j]=noviString;
+				j++;
+				noviString="";
 			}
 			i++;		
 		}
@@ -39,7 +40,10 @@ public class RazdijeliString {
 		String[] nizStringova = razdijeli(nekiString, znak2); 
 		for (int i=0; i<nizStringova.length; i++)
 		{
-			System.out.print(nizStringova[i] + " ");
+			if(nizStringova[i] != null)
+			{
+				System.out.print(nizStringova[i] + ", ");
+			}
 		}
 	}
 
