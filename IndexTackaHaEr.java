@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class IndexTackaHaEr {
 
+	
+	/**
+	 * Funkcija prima string i ispisuje kompresovani string
+	 * @param str
+	 */
+
 	public static void kompresuj(String str) {
 		String[] niz = new String[30];
 		int brojac = 0;
